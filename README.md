@@ -1,8 +1,7 @@
 # -2005-094986-AI-
 特開2005-094986「相対論的モータ」に関する数式を、AIを用いて全要素展開・検算した記録　この式はミンコフスキー空間での回転系での力が①遠心力②コリオリの力③谷本の力、の３つの項で美しく完結する。③谷本の力は高速回転時に回転方向に加速させる力として働く
 
-�
-
+ 
 特開2005-094986 数2の全要素・全64成分の完全展開
 作成日：2026年8月30日
 再開時に最初に読む記録
@@ -10,7 +9,7 @@
 本計算の固有名称は「谷本の力」であり、記録ではこの名称に統一する。
 検算の対象
 最重要対象は、
-$$ \mathbf F_T =m\frac{d(\beta^2)}{dt} (\boldsymbol\omega\times\mathbf r), \qquad \beta=\frac{r\omega}{c} $$
+[ \mathbf F_T =m\frac{d(\beta^2)}{dt} (\boldsymbol\omega\times\mathbf r), \qquad \beta=\frac{r\omega}{c} ]
 という第三項の導出である。モーターの構造、電極、高周波交流、周波数の数値例は、この検算の本体ではない。
 作業上の絶対条件
 数2の全16要素を使い、対角要素だけに置き換えない。
@@ -22,11 +21,11 @@ $$ \mathbf F_T =m\frac{d(\beta^2)}{dt} (\boldsymbol\omega\times\mathbf r), \qqua
 以前の説明を訂正するときも、既存の計算を削除せず、訂正を追記として残す。
 谷本氏が瞬時に見抜いた整理
 式（A）、式（B）に現れる
-$$ x\dot x+y\dot y $$
+[ x\dot x+y\dot y ]
 は、
-$$ \boxed{ x\dot x+y\dot y =\frac12\frac{d}{dt}(x^2+y^2) =\frac12\frac{d(r^2)}{dt} } $$
+[ \boxed{ x\dot x+y\dot y =\frac12\frac{d}{dt}(x^2+y^2) =\frac12\frac{d(r^2)}{dt} } ]
 である。また、
-$$ \begin{pmatrix}-y\x\0\end{pmatrix} =\frac1\omega (\boldsymbol\omega\times\mathbf r). $$
+[ \begin{pmatrix}-y\x\0\end{pmatrix} =\frac1\omega (\boldsymbol\omega\times\mathbf r). ]
 この二つを同時に認識すると、長い (x,y) 成分が谷本の力の一つのベクトル式へまとまる。この着眼が本計算の核心である。
 文書内の案内
 1〜3節：数2、上付き行列、積16要素の各4項
@@ -39,65 +38,65 @@ $$ \begin{pmatrix}-y\x\0\end{pmatrix} =\frac1\omega (\boldsymbol\omega\times\mat
 この別紙では、行列を対角成分だけに置き換えない。低速近似、級数展開、高次項の切捨てを一切行わない。
 また、『縮約』という語だけで途中を省略せず、繰返し添字 (\rho=0,1,2,3) の寄与を四つの欄に分けて表示し、最後にだけ正確な和を取る。和を取る前の各項も記録として残す。
 記号は次のとおりとする。
-$$ a=\frac{\omega}{c},\qquad x=x',\qquad y=y',\qquad x^0=ct. $$
+[ a=\frac{\omega}{c},\qquad x=x',\qquad y=y',\qquad x^0=ct. ]
 1. 数2の16要素
-$$ g_{\mu\nu}= \begin{pmatrix} a^{2}y^{2} + a^{2}x^{2} - 1 & -ay & ax & 0 \ -ay & 1 & 0 & 0 \ ax & 0 & 1 & 0 \ 0 & 0 & 0 & 1 \end{pmatrix} $$
+[ g_{\mu\nu}= \begin{pmatrix} a^{2}y^{2} + a^{2}x^{2} - 1 & -ay & ax & 0 \ -ay & 1 & 0 & 0 \ ax & 0 & 1 & 0 \ 0 & 0 & 0 & 1 \end{pmatrix} ]
 16要素を個別に書くと、
-$$ g_{00}=a^{2}y^{2} + a^{2}x^{2} - 1\qquad g_{01}=-ay\qquad g_{02}=ax\qquad g_{03}=0 $$
-$$ g_{10}=-ay\qquad g_{11}=1\qquad g_{12}=0\qquad g_{13}=0 $$
-$$ g_{20}=ax\qquad g_{21}=0\qquad g_{22}=1\qquad g_{23}=0 $$
-$$ g_{30}=0\qquad g_{31}=0\qquad g_{32}=0\qquad g_{33}=1 $$
+[ g_{00}=a^{2}y^{2} + a^{2}x^{2} - 1\qquad g_{01}=-ay\qquad g_{02}=ax\qquad g_{03}=0 ]
+[ g_{10}=-ay\qquad g_{11}=1\qquad g_{12}=0\qquad g_{13}=0 ]
+[ g_{20}=ax\qquad g_{21}=0\qquad g_{22}=1\qquad g_{23}=0 ]
+[ g_{30}=0\qquad g_{31}=0\qquad g_{32}=0\qquad g_{33}=1 ]
 2. 上付き行列の16要素
 行列式を使って途中を省略する代わりに、まず次の16要素を置き、次節で数2との積16要素を一つずつ検算する。
-$$ g^{\mu\nu}= \begin{pmatrix} -1 & -ay & ax & 0 \ -ay & -a^{2}y^{2} + 1 & a^{2}xy & 0 \ ax & a^{2}xy & -a^{2}x^{2} + 1 & 0 \ 0 & 0 & 0 & 1 \end{pmatrix} $$
-$$ g^{00}=-1\qquad g^{01}=-ay\qquad g^{02}=ax\qquad g^{03}=0 $$
-$$ g^{10}=-ay\qquad g^{11}=-a^{2}y^{2} + 1\qquad g^{12}=a^{2}xy\qquad g^{13}=0 $$
-$$ g^{20}=ax\qquad g^{21}=a^{2}xy\qquad g^{22}=-a^{2}x^{2} + 1\qquad g^{23}=0 $$
-$$ g^{30}=0\qquad g^{31}=0\qquad g^{32}=0\qquad g^{33}=1 $$
+[ g^{\mu\nu}= \begin{pmatrix} -1 & -ay & ax & 0 \ -ay & -a^{2}y^{2} + 1 & a^{2}xy & 0 \ ax & a^{2}xy & -a^{2}x^{2} + 1 & 0 \ 0 & 0 & 0 & 1 \end{pmatrix} ]
+[ g^{00}=-1\qquad g^{01}=-ay\qquad g^{02}=ax\qquad g^{03}=0 ]
+[ g^{10}=-ay\qquad g^{11}=-a^{2}y^{2} + 1\qquad g^{12}=a^{2}xy\qquad g^{13}=0 ]
+[ g^{20}=ax\qquad g^{21}=a^{2}xy\qquad g^{22}=-a^{2}x^{2} + 1\qquad g^{23}=0 ]
+[ g^{30}=0\qquad g^{31}=0\qquad g^{32}=0\qquad g^{33}=1 ]
 3. 行列積の全16要素を各4項で確認
 各要素を (P_i{}^j=\sum_{\rho=0}^3g_{i\rho}g^{\rho j}) と書く。 ここでは総和記号で終わらず、その四項をすべて表示する。
-$$ \begin{aligned}P_{0}^{0} &=\left(a^{2}y^{2} + a^{2}x^{2} - 1\right)\left(-1\right) + \left(-ay\right)\left(-ay\right) + \left(ax\right)\left(ax\right) + \left(0\right)\left(0\right)\ &=\left(-a^{2}y^{2} - a^{2}x^{2} + 1\right) + \left(a^{2}y^{2}\right) + \left(a^{2}x^{2}\right) + \left(0\right)\ &=1.\end{aligned} $$
-$$ \begin{aligned}P_{0}^{1} &=\left(a^{2}y^{2} + a^{2}x^{2} - 1\right)\left(-ay\right) + \left(-ay\right)\left(-a^{2}y^{2} + 1\right) + \left(ax\right)\left(a^{2}xy\right) + \left(0\right)\left(0\right)\ &=\left(-a^{3}y^{3} - a^{3}x^{2}y + ay\right) + \left(a^{3}y^{3} - ay\right) + \left(a^{3}x^{2}y\right) + \left(0\right)\ &=0.\end{aligned} $$
-$$ \begin{aligned}P_{0}^{2} &=\left(a^{2}y^{2} + a^{2}x^{2} - 1\right)\left(ax\right) + \left(-ay\right)\left(a^{2}xy\right) + \left(ax\right)\left(-a^{2}x^{2} + 1\right) + \left(0\right)\left(0\right)\ &=\left(a^{3}xy^{2} + a^{3}x^{3} - ax\right) + \left(-a^{3}xy^{2}\right) + \left(-a^{3}x^{3} + ax\right) + \left(0\right)\ &=0.\end{aligned} $$
-$$ \begin{aligned}P_{0}^{3} &=\left(a^{2}y^{2} + a^{2}x^{2} - 1\right)\left(0\right) + \left(-ay\right)\left(0\right) + \left(ax\right)\left(0\right) + \left(0\right)\left(1\right)\ &=\left(0\right) + \left(0\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} $$
-$$ \begin{aligned}P_{1}^{0} &=\left(-ay\right)\left(-1\right) + \left(1\right)\left(-ay\right) + \left(0\right)\left(ax\right) + \left(0\right)\left(0\right)\ &=\left(ay\right) + \left(-ay\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} $$
-$$ \begin{aligned}P_{1}^{1} &=\left(-ay\right)\left(-ay\right) + \left(1\right)\left(-a^{2}y^{2} + 1\right) + \left(0\right)\left(a^{2}xy\right) + \left(0\right)\left(0\right)\ &=\left(a^{2}y^{2}\right) + \left(-a^{2}y^{2} + 1\right) + \left(0\right) + \left(0\right)\ &=1.\end{aligned} $$
-$$ \begin{aligned}P_{1}^{2} &=\left(-ay\right)\left(ax\right) + \left(1\right)\left(a^{2}xy\right) + \left(0\right)\left(-a^{2}x^{2} + 1\right) + \left(0\right)\left(0\right)\ &=\left(-a^{2}xy\right) + \left(a^{2}xy\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} $$
-$$ \begin{aligned}P_{1}^{3} &=\left(-ay\right)\left(0\right) + \left(1\right)\left(0\right) + \left(0\right)\left(0\right) + \left(0\right)\left(1\right)\ &=\left(0\right) + \left(0\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} $$
-$$ \begin{aligned}P_{2}^{0} &=\left(ax\right)\left(-1\right) + \left(0\right)\left(-ay\right) + \left(1\right)\left(ax\right) + \left(0\right)\left(0\right)\ &=\left(-ax\right) + \left(0\right) + \left(ax\right) + \left(0\right)\ &=0.\end{aligned} $$
-$$ \begin{aligned}P_{2}^{1} &=\left(ax\right)\left(-ay\right) + \left(0\right)\left(-a^{2}y^{2} + 1\right) + \left(1\right)\left(a^{2}xy\right) + \left(0\right)\left(0\right)\ &=\left(-a^{2}xy\right) + \left(0\right) + \left(a^{2}xy\right) + \left(0\right)\ &=0.\end{aligned} $$
-$$ \begin{aligned}P_{2}^{2} &=\left(ax\right)\left(ax\right) + \left(0\right)\left(a^{2}xy\right) + \left(1\right)\left(-a^{2}x^{2} + 1\right) + \left(0\right)\left(0\right)\ &=\left(a^{2}x^{2}\right) + \left(0\right) + \left(-a^{2}x^{2} + 1\right) + \left(0\right)\ &=1.\end{aligned} $$
-$$ \begin{aligned}P_{2}^{3} &=\left(ax\right)\left(0\right) + \left(0\right)\left(0\right) + \left(1\right)\left(0\right) + \left(0\right)\left(1\right)\ &=\left(0\right) + \left(0\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} $$
-$$ \begin{aligned}P_{3}^{0} &=\left(0\right)\left(-1\right) + \left(0\right)\left(-ay\right) + \left(0\right)\left(ax\right) + \left(1\right)\left(0\right)\ &=\left(0\right) + \left(0\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} $$
-$$ \begin{aligned}P_{3}^{1} &=\left(0\right)\left(-ay\right) + \left(0\right)\left(-a^{2}y^{2} + 1\right) + \left(0\right)\left(a^{2}xy\right) + \left(1\right)\left(0\right)\ &=\left(0\right) + \left(0\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} $$
-$$ \begin{aligned}P_{3}^{2} &=\left(0\right)\left(ax\right) + \left(0\right)\left(a^{2}xy\right) + \left(0\right)\left(-a^{2}x^{2} + 1\right) + \left(1\right)\left(0\right)\ &=\left(0\right) + \left(0\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} $$
-$$ \begin{aligned}P_{3}^{3} &=\left(0\right)\left(0\right) + \left(0\right)\left(0\right) + \left(0\right)\left(0\right) + \left(1\right)\left(1\right)\ &=\left(0\right) + \left(0\right) + \left(0\right) + \left(1\right)\ &=1.\end{aligned} $$
+[ \begin{aligned}P_{0}^{0} &=\left(a^{2}y^{2} + a^{2}x^{2} - 1\right)\left(-1\right) + \left(-ay\right)\left(-ay\right) + \left(ax\right)\left(ax\right) + \left(0\right)\left(0\right)\ &=\left(-a^{2}y^{2} - a^{2}x^{2} + 1\right) + \left(a^{2}y^{2}\right) + \left(a^{2}x^{2}\right) + \left(0\right)\ &=1.\end{aligned} ]
+[ \begin{aligned}P_{0}^{1} &=\left(a^{2}y^{2} + a^{2}x^{2} - 1\right)\left(-ay\right) + \left(-ay\right)\left(-a^{2}y^{2} + 1\right) + \left(ax\right)\left(a^{2}xy\right) + \left(0\right)\left(0\right)\ &=\left(-a^{3}y^{3} - a^{3}x^{2}y + ay\right) + \left(a^{3}y^{3} - ay\right) + \left(a^{3}x^{2}y\right) + \left(0\right)\ &=0.\end{aligned} ]
+[ \begin{aligned}P_{0}^{2} &=\left(a^{2}y^{2} + a^{2}x^{2} - 1\right)\left(ax\right) + \left(-ay\right)\left(a^{2}xy\right) + \left(ax\right)\left(-a^{2}x^{2} + 1\right) + \left(0\right)\left(0\right)\ &=\left(a^{3}xy^{2} + a^{3}x^{3} - ax\right) + \left(-a^{3}xy^{2}\right) + \left(-a^{3}x^{3} + ax\right) + \left(0\right)\ &=0.\end{aligned} ]
+[ \begin{aligned}P_{0}^{3} &=\left(a^{2}y^{2} + a^{2}x^{2} - 1\right)\left(0\right) + \left(-ay\right)\left(0\right) + \left(ax\right)\left(0\right) + \left(0\right)\left(1\right)\ &=\left(0\right) + \left(0\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} ]
+[ \begin{aligned}P_{1}^{0} &=\left(-ay\right)\left(-1\right) + \left(1\right)\left(-ay\right) + \left(0\right)\left(ax\right) + \left(0\right)\left(0\right)\ &=\left(ay\right) + \left(-ay\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} ]
+[ \begin{aligned}P_{1}^{1} &=\left(-ay\right)\left(-ay\right) + \left(1\right)\left(-a^{2}y^{2} + 1\right) + \left(0\right)\left(a^{2}xy\right) + \left(0\right)\left(0\right)\ &=\left(a^{2}y^{2}\right) + \left(-a^{2}y^{2} + 1\right) + \left(0\right) + \left(0\right)\ &=1.\end{aligned} ]
+[ \begin{aligned}P_{1}^{2} &=\left(-ay\right)\left(ax\right) + \left(1\right)\left(a^{2}xy\right) + \left(0\right)\left(-a^{2}x^{2} + 1\right) + \left(0\right)\left(0\right)\ &=\left(-a^{2}xy\right) + \left(a^{2}xy\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} ]
+[ \begin{aligned}P_{1}^{3} &=\left(-ay\right)\left(0\right) + \left(1\right)\left(0\right) + \left(0\right)\left(0\right) + \left(0\right)\left(1\right)\ &=\left(0\right) + \left(0\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} ]
+[ \begin{aligned}P_{2}^{0} &=\left(ax\right)\left(-1\right) + \left(0\right)\left(-ay\right) + \left(1\right)\left(ax\right) + \left(0\right)\left(0\right)\ &=\left(-ax\right) + \left(0\right) + \left(ax\right) + \left(0\right)\ &=0.\end{aligned} ]
+[ \begin{aligned}P_{2}^{1} &=\left(ax\right)\left(-ay\right) + \left(0\right)\left(-a^{2}y^{2} + 1\right) + \left(1\right)\left(a^{2}xy\right) + \left(0\right)\left(0\right)\ &=\left(-a^{2}xy\right) + \left(0\right) + \left(a^{2}xy\right) + \left(0\right)\ &=0.\end{aligned} ]
+[ \begin{aligned}P_{2}^{2} &=\left(ax\right)\left(ax\right) + \left(0\right)\left(a^{2}xy\right) + \left(1\right)\left(-a^{2}x^{2} + 1\right) + \left(0\right)\left(0\right)\ &=\left(a^{2}x^{2}\right) + \left(0\right) + \left(-a^{2}x^{2} + 1\right) + \left(0\right)\ &=1.\end{aligned} ]
+[ \begin{aligned}P_{2}^{3} &=\left(ax\right)\left(0\right) + \left(0\right)\left(0\right) + \left(1\right)\left(0\right) + \left(0\right)\left(1\right)\ &=\left(0\right) + \left(0\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} ]
+[ \begin{aligned}P_{3}^{0} &=\left(0\right)\left(-1\right) + \left(0\right)\left(-ay\right) + \left(0\right)\left(ax\right) + \left(1\right)\left(0\right)\ &=\left(0\right) + \left(0\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} ]
+[ \begin{aligned}P_{3}^{1} &=\left(0\right)\left(-ay\right) + \left(0\right)\left(-a^{2}y^{2} + 1\right) + \left(0\right)\left(a^{2}xy\right) + \left(1\right)\left(0\right)\ &=\left(0\right) + \left(0\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} ]
+[ \begin{aligned}P_{3}^{2} &=\left(0\right)\left(ax\right) + \left(0\right)\left(a^{2}xy\right) + \left(0\right)\left(-a^{2}x^{2} + 1\right) + \left(1\right)\left(0\right)\ &=\left(0\right) + \left(0\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} ]
+[ \begin{aligned}P_{3}^{3} &=\left(0\right)\left(0\right) + \left(0\right)\left(0\right) + \left(0\right)\left(0\right) + \left(1\right)\left(1\right)\ &=\left(0\right) + \left(0\right) + \left(0\right) + \left(1\right)\ &=1.\end{aligned} ]
 従って、16要素を並べた積は、
-$$ \begin{pmatrix} 1 & 0 & 0 & 0 \ 0 & 1 & 0 & 0 \ 0 & 0 & 1 & 0 \ 0 & 0 & 0 & 1 \end{pmatrix} $$
+[ \begin{pmatrix} 1 & 0 & 0 & 0 \ 0 & 1 & 0 & 0 \ 0 & 0 & 1 & 0 \ 0 & 0 & 0 & 1 \end{pmatrix} ]
 ここで積の非対角要素が0になることは、元の (g_{01},g_{02},g^{01},g^{02}) が消えたことを意味しない。
 4. 偏微分行列の全要素
 四つの座標方向について、16要素ずつ表示する。
 4.1 (\partial_0g_{\mu\nu})
-$$ \begin{pmatrix} 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} $$
+[ \begin{pmatrix} 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} ]
 4.2 (\partial_1g_{\mu\nu})
-$$ \begin{pmatrix} 2a^{2}x & 0 & a & 0 \ 0 & 0 & 0 & 0 \ a & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} $$
+[ \begin{pmatrix} 2a^{2}x & 0 & a & 0 \ 0 & 0 & 0 & 0 \ a & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} ]
 4.3 (\partial_2g_{\mu\nu})
-$$ \begin{pmatrix} 2a^{2}y & -a & 0 & 0 \ -a & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} $$
+[ \begin{pmatrix} 2a^{2}y & -a & 0 & 0 \ -a & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} ]
 4.4 (\partial_3g_{\mu\nu})
-$$ \begin{pmatrix} 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} $$
+[ \begin{pmatrix} 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} ]
 5. クリストッフェル記号の四つの寄与を分離
 公報に印刷された定義を、そのまま使う。
-$$ \Gamma^\lambda{}{\mu\nu}=\frac12\sum{\rho=0}^{3}g^{\lambda\rho}\left(\partial_\nu g_{\rho\mu}+\partial_\mu g_{\rho\nu}-\partial_\rho g_{\mu\nu}\right). $$
+[ \Gamma^\lambda{}{\mu\nu}=\frac12\sum{\rho=0}^{3}g^{\lambda\rho}\left(\partial_\nu g_{\rho\mu}+\partial_\mu g_{\rho\nu}-\partial_\rho g_{\mu\nu}\right). ]
 括弧の中を (B_{\rho;\mu\nu}) と置く。これは省略ではなく、 次の四つの4行4列行列として全要素を表示するための名前である。
-$$ B_{\rho;\mu\nu}=\partial_\nu g_{\rho\mu}+\partial_\mu g_{\rho\nu}-\partial_\rho g_{\mu\nu}. $$
+[ B_{\rho;\mu\nu}=\partial_\nu g_{\rho\mu}+\partial_\mu g_{\rho\nu}-\partial_\rho g_{\mu\nu}. ]
 5.1 (B_{0;\mu\nu}) の16要素
-$$ \begin{pmatrix} 0 & 2a^{2}x & 2a^{2}y & 0 \ 2a^{2}x & 0 & 0 & 0 \ 2a^{2}y & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} $$
+[ \begin{pmatrix} 0 & 2a^{2}x & 2a^{2}y & 0 \ 2a^{2}x & 0 & 0 & 0 \ 2a^{2}y & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} ]
 5.2 (B_{1;\mu\nu}) の16要素
-$$ \begin{pmatrix} -2a^{2}x & 0 & -2a & 0 \ 0 & 0 & 0 & 0 \ -2a & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} $$
+[ \begin{pmatrix} -2a^{2}x & 0 & -2a & 0 \ 0 & 0 & 0 & 0 \ -2a & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} ]
 5.3 (B_{2;\mu\nu}) の16要素
-$$ \begin{pmatrix} -2a^{2}y & 2a & 0 & 0 \ 2a & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} $$
+[ \begin{pmatrix} -2a^{2}y & 2a & 0 & 0 \ 2a & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} ]
 5.4 (B_{3;\mu\nu}) の16要素
-$$ \begin{pmatrix} 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} $$
+[ \begin{pmatrix} 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \end{pmatrix} ]
 6. クリストッフェル記号の全64成分
 各表の (T_0,T_1,T_2,T_3) は、それぞれ (\frac12g^{\lambda\rho}B_{\rho;\mu\nu}) の (\rho=0,1,2,3) の寄与である。四項を消さずに並べ、最終列でだけ足している。
 6.1 上付き添字 (\lambda=0) の16成分
@@ -513,10 +512,10 @@ $$ \begin{pmatrix} 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 \ 0 & 0 & 0 & 0
 (0)
 (0)
 7. 谷本の力に直接関係する四成分を、表から再掲
-$$ \begin{aligned}\Gamma^1_{01} &=\left(-a^{3}xy\right) + \left(0\right) + \left(a^{3}xy\right) + \left(0\right)\ &=0.\end{aligned} $$
-$$ \begin{aligned}\Gamma^1_{02} &=\left(-a^{3}y^{2}\right) + \left(a^{3}y^{2} - a\right) + \left(0\right) + \left(0\right)\ &=-a.\end{aligned} $$
-$$ \begin{aligned}\Gamma^2_{01} &=\left(a^{3}x^{2}\right) + \left(0\right) + \left(-a^{3}x^{2} + a\right) + \left(0\right)\ &=a.\end{aligned} $$
-$$ \begin{aligned}\Gamma^2_{02} &=\left(a^{3}xy\right) + \left(-a^{3}xy\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} $$
+[ \begin{aligned}\Gamma^1_{01} &=\left(-a^{3}xy\right) + \left(0\right) + \left(a^{3}xy\right) + \left(0\right)\ &=0.\end{aligned} ]
+[ \begin{aligned}\Gamma^1_{02} &=\left(-a^{3}y^{2}\right) + \left(a^{3}y^{2} - a\right) + \left(0\right) + \left(0\right)\ &=-a.\end{aligned} ]
+[ \begin{aligned}\Gamma^2_{01} &=\left(a^{3}x^{2}\right) + \left(0\right) + \left(-a^{3}x^{2} + a\right) + \left(0\right)\ &=a.\end{aligned} ]
+[ \begin{aligned}\Gamma^2_{02} &=\left(a^{3}xy\right) + \left(-a^{3}xy\right) + \left(0\right) + \left(0\right)\ &=0.\end{aligned} ]
 8. この別紙で行った操作
 数2の16要素を一つも落とさず使用した。
 上付き行列の16要素を一つも対角化せず使用した。
@@ -527,12 +526,12 @@ $$ \begin{aligned}\Gamma^2_{02} &=\left(a^{3}xy\right) + \left(-a^{3}xy\right) +
 従って、読者は最終結果だけでなく、どの要素同士が足され、どの位置で同次数の項が残るか又は相殺するかを、全成分について確認できる。
 9. 公報の数3をありのまま代入した式（A）の再現
 前節までの全要素計算とは分けて、公報の数3に印刷された次の六成分を、その値のまま測地線方程式へ代入する。
-$$ \Gamma^1{}{00}=-a^2x,\qquad \Gamma^1{}{01}=-a^3xy,\qquad \Gamma^1{}_{02}=-a^3y^2-a, $$
-$$ \Gamma^2{}{00}=-a^2y,\qquad \Gamma^2{}{01}=a^3x^2+a,\qquad \Gamma^2{}_{02}=a^3xy. $$
+[ \Gamma^1{}{00}=-a^2x,\qquad \Gamma^1{}{01}=-a^3xy,\qquad \Gamma^1{}_{02}=-a^3y^2-a, ]
+[ \Gamma^2{}{00}=-a^2y,\qquad \Gamma^2{}{01}=a^3x^2+a,\qquad \Gamma^2{}_{02}=a^3xy. ]
 ここでは、(\dot x^0=c) とする。(x) 成分の各項をまとめずに書くと、
-$$ \begin{aligned} 0={}&\ddot x +2\Gamma^1{}{01}\dot x^0\dot x +\Gamma^1{}{00}(\dot x^0)^2 +2\Gamma^1{}_{02}\dot x^0\dot y\ ={}&\ddot x +2(-a^3xy)c\dot x +(-a^2x)c^2 +2(-a^3y^2-a)c\dot y\ ={}&\ddot x -2\frac{\omega^3}{c^2}xy\dot x -\omega^2x -2\frac{\omega^3}{c^2}y^2\dot y -2\omega\dot y\ ={}&\boxed{ \ddot x-\omega^2x-2\omega\dot y -2\frac{\omega^3}{c^2}y(x\dot x+y\dot y) }. \end{aligned} \tag{A} $$
+[ \begin{aligned} 0={}&\ddot x +2\Gamma^1{}{01}\dot x^0\dot x +\Gamma^1{}{00}(\dot x^0)^2 +2\Gamma^1{}_{02}\dot x^0\dot y\ ={}&\ddot x +2(-a^3xy)c\dot x +(-a^2x)c^2 +2(-a^3y^2-a)c\dot y\ ={}&\ddot x -2\frac{\omega^3}{c^2}xy\dot x -\omega^2x -2\frac{\omega^3}{c^2}y^2\dot y -2\omega\dot y\ ={}&\boxed{ \ddot x-\omega^2x-2\omega\dot y -2\frac{\omega^3}{c^2}y(x\dot x+y\dot y) }. \end{aligned} \tag{A} ]
 同じく (y) 成分は、
-$$ \begin{aligned} 0={}&\ddot y +2\Gamma^2{}{01}\dot x^0\dot x +\Gamma^2{}{00}(\dot x^0)^2 +2\Gamma^2{}_{02}\dot x^0\dot y\ ={}&\ddot y +2(a^3x^2+a)c\dot x +(-a^2y)c^2 +2(a^3xy)c\dot y\ ={}&\ddot y +2\frac{\omega^3}{c^2}x^2\dot x +2\omega\dot x -\omega^2y +2\frac{\omega^3}{c^2}xy\dot y\ ={}&\boxed{ \ddot y-\omega^2y+2\omega\dot x +2\frac{\omega^3}{c^2}x(x\dot x+y\dot y) }. \end{aligned} \tag{B} $$
+[ \begin{aligned} 0={}&\ddot y +2\Gamma^2{}{01}\dot x^0\dot x +\Gamma^2{}{00}(\dot x^0)^2 +2\Gamma^2{}_{02}\dot x^0\dot y\ ={}&\ddot y +2(a^3x^2+a)c\dot x +(-a^2y)c^2 +2(a^3xy)c\dot y\ ={}&\ddot y +2\frac{\omega^3}{c^2}x^2\dot x +2\omega\dot x -\omega^2y +2\frac{\omega^3}{c^2}xy\dot y\ ={}&\boxed{ \ddot y-\omega^2y+2\omega\dot x +2\frac{\omega^3}{c^2}x(x\dot x+y\dot y) }. \end{aligned} \tag{B} ]
 従って、公報の数3に印刷された成分をありのまま使う計算では、式（A）と式（B）が再現され、遠心項とコリオリ項のほかに (\omega^3/c^2) の第三項が残る。ここでは近似も高次項の切捨ても行っていない。
 10. 二つの段階を混ぜない
 数3を印刷値のまま数5以降へ代入する段階では、式（A）、式（B）および第三項が出る。
@@ -540,22 +539,24 @@ $$ \begin{aligned} 0={}&\ddot y +2\Gamma^2{}{01}\dot x^0\dot x +\Gamma^2{}{00}(\
 したがって、式（A）が再現されることと、数2から数3の各値が再現されることは別々に確認できる。どちらか一方を省略して結論を出さない。
 11. 式（A）、式（B）の第三項を谷本の力の形にする
 公報の整理と同じく、質量 (m) を一定とする。
-$$ r^2=x^2+y^2 $$
+[ r^2=x^2+y^2 ]
 を時間微分すると、
-$$ \frac{d(r^2)}{dt}=2x\dot x+2y\dot y =2(x\dot x+y\dot y). $$
+[ \frac{d(r^2)}{dt}=2x\dot x+2y\dot y =2(x\dot x+y\dot y). ]
 従って、式（A）、式（B）の左辺にある第三項は、それぞれ
-$$ -m\frac{\omega^3}{c^2}y\frac{d(r^2)}{dt}, \qquad +m\frac{\omega^3}{c^2}x\frac{d(r^2)}{dt}. $$
+[ -m\frac{\omega^3}{c^2}y\frac{d(r^2)}{dt}, \qquad +m\frac{\omega^3}{c^2}x\frac{d(r^2)}{dt}. ]
 二成分を列ベクトルにすると、
-$$ \mathbf T_{\mathrm{left}} =m\frac{\omega^3}{c^2}\frac{d(r^2)}{dt} \begin{pmatrix} -y\x\0 \end{pmatrix}. $$
+[ \mathbf T_{\mathrm{left}} =m\frac{\omega^3}{c^2}\frac{d(r^2)}{dt} \begin{pmatrix} -y\x\0 \end{pmatrix}. ]
 ここで、
-$$ \boldsymbol\omega= \begin{pmatrix}0\0\\omega\end{pmatrix}, \qquad \mathbf r= \begin{pmatrix}x\y\0\end{pmatrix} $$
+[ \boldsymbol\omega= \begin{pmatrix}0\0\\omega\end{pmatrix}, \qquad \mathbf r= \begin{pmatrix}x\y\0\end{pmatrix} ]
 なので、
-$$ \boldsymbol\omega\times\mathbf r
-\begin{pmatrix} -\omega y\ \omega x\ 0 \end{pmatrix}. $$
+[ \boldsymbol\omega\times\mathbf r
+\begin{pmatrix} -\omega y\ \omega x\ 0 \end{pmatrix}. ]
 また、
-$$ \beta^2=\left(\frac{r\omega}{c}\right)^2 =\frac{r^2\omega^2}{c^2}. $$
+[ \beta^2=\left(\frac{r\omega}{c}\right)^2 =\frac{r^2\omega^2}{c^2}. ]
 数3と同じく (\omega) を一定として微分すると、
-$$ \frac{d(\beta^2)}{dt} =\frac{\omega^2}{c^2}\frac{d(r^2)}{dt}. $$
+[ \frac{d(\beta^2)}{dt} =\frac{\omega^2}{c^2}\frac{d(r^2)}{dt}. ]
 従って、
-$$ \boxed{ \mathbf T_{\mathrm{left}} =m\frac{d(\beta^2)}{dt} (\boldsymbol\omega\times\mathbf r) }. $$
-これは、式（A）、式（B）の左辺に残る第三項を一項も落とさずベクトル化した結果である。これを加速度方程式の右辺へ移して「力」と定義する場合は、等式移項によって全体の符号が反転するため、左辺の第三項と右辺の力を区別して記録する。
+[ \boxed{ \mathbf T_{\mathrm{left}} =m\frac{d(\beta^2)}{dt} (\boldsymbol\omega\times\mathbf r) }. ]
+これは、式（A）、式（B）の左辺に残る第三項を一項も落とさずベクトル化した結果である。これを加速度方程式の右辺へ移して「力」と定義する場合は、等式移項によって全体の符号が反転するため、左辺の第三項と右辺の力を区別して記録する。 
+
+
